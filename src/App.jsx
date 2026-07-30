@@ -1,6 +1,4 @@
-import { General } from "./components/General";
-import { Education } from "./components/Education";
-import { PracticalExperience } from "./components/PracticalExperience";
+import { CvForm } from "./components/CvForm";
 import "./styles/App.css";
 
 function App() {
@@ -8,9 +6,7 @@ function App() {
 		<>
 			<main>
 				<h1>CV Application</h1>
-				<General />
-				<Education />
-				<PracticalExperience />
+				<CvForm />
 			</main>
 		</>
 	);
