@@ -1,6 +1,6 @@
 export function Education() {
 	return (
-		<>
+		<section>
 			<h2>Education</h2>
 			<div>
 				<label htmlFor="school-name">School name</label>
@@ -22,6 +22,6 @@ export function Education() {
 				<label htmlFor="study-end-date">End date</label>
 				<input type="date" id="study-end-date" name="study-end-date" />
 			</div>
-		</>
+		</section>
 	);
 }

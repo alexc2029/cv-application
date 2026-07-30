@@ -1,6 +1,6 @@
 export function General() {
 	return (
-		<>
+		<section>
 			<h2>General Information</h2>
 			<div>
 				<label htmlFor="name">Name</label>
@@ -14,6 +14,6 @@ export function General() {
 				<label htmlFor="phone-number">Phone number</label>
 				<input type="tel" id="phone-number" name="phone-number" />
 			</div>
-		</>
+		</section>
 	);
 }

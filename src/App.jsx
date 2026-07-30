@@ -8,15 +8,9 @@ function App() {
 		<>
 			<main>
 				<h1>CV Application</h1>
-				<section>
-					<General />
-				</section>
-				<section>
-					<Education />
-				</section>
-				<section>
-					<PracticalExperience />
-				</section>
+				<General />
+				<Education />
+				<PracticalExperience />
 			</main>
 		</>
 	);

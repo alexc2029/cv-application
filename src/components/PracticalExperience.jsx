@@ -1,6 +1,6 @@
 export function PracticalExperience() {
 	return (
-		<>
+		<section>
 			<h2>Practical Experience</h2>
 			<div>
 				<label htmlFor="company-name">Company name</label>
@@ -27,6 +27,6 @@ export function PracticalExperience() {
 				<label htmlFor="end-date">End date</label>
 				<input type="date" id="end-date" name="end-date" />
 			</div>
-		</>
+		</section>
 	);
 }
