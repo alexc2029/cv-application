@@ -8,7 +8,7 @@ export function CvForm({ handleSubmit, isSubmitted }) {
 			<General isSubmitted={isSubmitted} />
 			<Education isSubmitted={isSubmitted} />
 			<PracticalExperience isSubmitted={isSubmitted} />
-			<button type="submit">Submit</button>
+			<button type="submit">{isSubmitted ? "Edit" : "Submit"}</button>
 		</form>
 	);
 }
