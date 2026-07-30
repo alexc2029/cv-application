@@ -1,7 +1,7 @@
 export function General() {
 	return (
 		<>
-			<h2>General inhtmlFormation</h2>
+			<h2>General Information</h2>
 			<div>
 				<label htmlFor="name">Name</label>
 				<input type="text" id="name" name="name" />
