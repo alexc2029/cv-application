@@ -46,3 +46,62 @@ h6 {
 ul {
 	list-style-type: none;
 }
+
+#root {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	font-weight: 500;
+	gap: 20px;
+}
+
+form div {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	font-size: clamp(0.5rem, 0.3rem + 1vw, 0.65rem);
+}
+
+input,
+textarea {
+	outline: none;
+	background-color: rgb(251, 251, 251);
+	border: 2px solid #e5e7eb;
+	border-radius: 5px;
+	width: 235px;
+}
+
+input:focus,
+input:focus-visible {
+	border: 2px solid blue;
+	box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+input:invalid {
+	border: 2px solid red;
+}
+
+button {
+	background-color: #596d48;
+	color: white;
+	border: 0;
+	border-radius: 5px;
+	padding: 5px 20px;
+	width: fit-content;
+	align-self: center;
+}
