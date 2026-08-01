@@ -4,8 +4,7 @@ import { useState } from "react";
 
 function App() {
 	const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-	const handleSubmit = (e) => {
-		e.preventDefault();
+	const handleSubmit = () => {
 		setIsFormSubmitted(!isFormSubmitted);
 	};
 	return (
@@ -16,6 +15,9 @@ function App() {
 					handleSubmit={handleSubmit}
 					isSubmitted={isFormSubmitted}
 				/>
+				<button onClick={handleSubmit}>
+					{isFormSubmitted ? "Edit" : "Submit"}
+				</button>
 			</main>
 		</>
 	);
