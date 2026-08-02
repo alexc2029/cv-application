@@ -25,6 +25,7 @@ function App() {
 	const toggleSubmit = () => {
 		setIsFormSubmitted(!isFormSubmitted);
 	};
+	const onButtonClick = () => setTimeout(toggleSubmit);
 	const handleFinalSubmit = (formDataObject) => {
 		console.log(formDataObject);
 	};
@@ -41,7 +42,7 @@ function App() {
 				<button
 					type={isFormSubmitted ? "button" : "submit"}
 					form={isFormSubmitted ? "" : "cv-form"}
-					onClick={toggleSubmit}
+					onClick={onButtonClick}
 				>
 					{isFormSubmitted ? "Edit" : "Submit"}
 				</button>
