@@ -10,7 +10,6 @@ export function CvForm({
 }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log("hey");
 		const data = Object.fromEntries(new FormData(e.target));
 		onSubmit(data);
 	};
