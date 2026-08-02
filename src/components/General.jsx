@@ -1,4 +1,4 @@
-export function General({ isSubmitted }) {
+export function General({}) {
 	return (
 		<section>
 			<h2>General Information</h2>
@@ -8,7 +8,7 @@ export function General({ isSubmitted }) {
 					type="text"
 					id="name"
 					name="name"
-					readOnly={isSubmitted}
+					defaultValue="John Smith"
 				/>
 			</div>
 			<div>
@@ -17,7 +17,7 @@ export function General({ isSubmitted }) {
 					type="email"
 					id="email"
 					name="email"
-					readOnly={isSubmitted}
+					defaultValue="john.smith@email.com"
 				/>
 			</div>
 			<div>
@@ -26,7 +26,7 @@ export function General({ isSubmitted }) {
 					type="tel"
 					id="phone-number"
 					name="phone-number"
-					readOnly={isSubmitted}
+					defaultValue="0722222222"
 				/>
 			</div>
 		</section>

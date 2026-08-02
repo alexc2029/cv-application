@@ -1,4 +1,4 @@
-export function PracticalExperience({ isSubmitted }) {
+export function PracticalExperience({}) {
 	return (
 		<section>
 			<h2>Practical Experience</h2>
@@ -8,7 +8,7 @@ export function PracticalExperience({ isSubmitted }) {
 					type="text"
 					id="company-name"
 					name="company-name"
-					readOnly={isSubmitted}
+					defaultValue="Microsoft"
 				/>
 			</div>
 			<div>
@@ -17,7 +17,7 @@ export function PracticalExperience({ isSubmitted }) {
 					type="text"
 					id="position-title"
 					name="position-title"
-					readOnly={isSubmitted}
+					defaultValue="CEO"
 				/>
 			</div>
 			<div>
@@ -27,26 +27,16 @@ export function PracticalExperience({ isSubmitted }) {
 				<textarea
 					id="main-responsibilities"
 					name="main-responsibilities"
-					readOnly={isSubmitted}
+					defaultValue="Running the company"
 				></textarea>
 			</div>
 			<div>
 				<label htmlFor="start-date">Start date</label>
-				<input
-					type="date"
-					id="start-date"
-					name="start-date"
-					readOnly={isSubmitted}
-				/>
+				<input type="date" id="start-date" name="start-date" />
 			</div>
 			<div>
 				<label htmlFor="end-date">End date</label>
-				<input
-					type="date"
-					id="end-date"
-					name="end-date"
-					readOnly={isSubmitted}
-				/>
+				<input type="date" id="end-date" name="end-date" />
 			</div>
 		</section>
 	);

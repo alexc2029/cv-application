@@ -4,18 +4,45 @@ import { useState } from "react";
 
 function App() {
 	const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-	const handleSubmit = () => {
+	const [generalInformation, setGeneralInformation] = useState({
+		name: "",
+		email: "",
+		phoneNumber: "",
+	});
+	const [education, setEducation] = useState({
+		schoolName: "",
+		titleOfStudy: "",
+		startDate: "",
+		endDate: "",
+	});
+	const [practicalExperience, setPracticalExperience] = useState({
+		companyName: "",
+		positionTitle: "",
+		mainResponsibilities: "",
+		startDate: "",
+		endDate: "",
+	});
+	const toggleSubmit = () => {
 		setIsFormSubmitted(!isFormSubmitted);
+	};
+	const handleFinalSubmit = (formDataObject) => {
+		console.log(formDataObject);
 	};
 	return (
 		<>
 			<main>
 				<h1>CV Application</h1>
 				<CvForm
-					handleSubmit={handleSubmit}
-					isSubmitted={isFormSubmitted}
+					onSubmit={handleFinalSubmit}
+					setGeneralInformation={setGeneralInformation}
+					setEducation={setEducation}
+					setPracticalExperience={setPracticalExperience}
 				/>
-				<button onClick={handleSubmit}>
+				<button
+					type={isFormSubmitted ? "button" : "submit"}
+					form={isFormSubmitted ? "" : "cv-form"}
+					onClick={toggleSubmit}
+				>
 					{isFormSubmitted ? "Edit" : "Submit"}
 				</button>
 			</main>

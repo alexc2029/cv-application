@@ -1,4 +1,4 @@
-export function Education({ isSubmitted }) {
+export function Education({}) {
 	return (
 		<section>
 			<h2>Education</h2>
@@ -8,7 +8,7 @@ export function Education({ isSubmitted }) {
 					type="text"
 					id="school-name"
 					name="school-name"
-					readOnly={isSubmitted}
+					defaultValue="Massachusetts Institute of Technology"
 				/>
 			</div>
 			<div>
@@ -17,7 +17,7 @@ export function Education({ isSubmitted }) {
 					type="text"
 					id="title-of-study"
 					name="title-of-study"
-					readOnly={isSubmitted}
+					defaultValue="Computer Science"
 				/>
 			</div>
 			<div>
@@ -26,17 +26,11 @@ export function Education({ isSubmitted }) {
 					type="date"
 					id="study-start-date"
 					name="study-start-date"
-					readOnly={isSubmitted}
 				/>
 			</div>
 			<div>
 				<label htmlFor="study-end-date">End date</label>
-				<input
-					type="date"
-					id="study-end-date"
-					name="study-end-date"
-					readOnly={isSubmitted}
-				/>
+				<input type="date" id="study-end-date" name="study-end-date" />
 			</div>
 		</section>
 	);
