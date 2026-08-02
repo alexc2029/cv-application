@@ -28,17 +28,30 @@ function App() {
 	const onButtonClick = () => setTimeout(toggleSubmit);
 	const handleFinalSubmit = (formDataObject) => {
 		console.log(formDataObject);
+		setGeneralInformation({
+			name: formDataObject.name,
+			email: formDataObject.email,
+			phoneNumber: formDataObject["phone-number"],
+		});
+		setEducation({
+			schoolName: formDataObject["school-name"],
+			titleOfStudy: formDataObject["title-of-study"],
+			startDate: formDataObject["study-start-date"],
+			endDate: formDataObject["study-end-date"],
+		});
+		setPracticalExperience({
+			companyName: formDataObject["company-name"],
+			positionTitle: formDataObject["position-title"],
+			mainResponsibilities: formDataObject["main-responsibilities"],
+			startDate: formDataObject["position-start-date"],
+			endDate: formDataObject["position-end-date"],
+		});
 	};
 	return (
 		<>
 			<main>
 				<h1>CV Application</h1>
-				<CvForm
-					onSubmit={handleFinalSubmit}
-					setGeneralInformation={setGeneralInformation}
-					setEducation={setEducation}
-					setPracticalExperience={setPracticalExperience}
-				/>
+				<CvForm onSubmit={handleFinalSubmit} />
 				<button
 					type={isFormSubmitted ? "button" : "submit"}
 					form={isFormSubmitted ? "" : "cv-form"}

@@ -31,12 +31,20 @@ export function PracticalExperience({}) {
 				></textarea>
 			</div>
 			<div>
-				<label htmlFor="start-date">Start date</label>
-				<input type="date" id="start-date" name="start-date" />
+				<label htmlFor="position-start-date">Start date</label>
+				<input
+					type="date"
+					id="position-start-date"
+					name="position-start-date"
+				/>
 			</div>
 			<div>
-				<label htmlFor="end-date">End date</label>
-				<input type="date" id="end-date" name="end-date" />
+				<label htmlFor="position-end-date">End date</label>
+				<input
+					type="date"
+					id="position-end-date"
+					name="position-end-date"
+				/>
 			</div>
 		</section>
 	);

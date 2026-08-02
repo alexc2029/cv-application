@@ -2,12 +2,7 @@ import { General } from "./General";
 import { Education } from "./Education";
 import { PracticalExperience } from "./PracticalExperience";
 
-export function CvForm({
-	onSubmit,
-	setGeneralInformation,
-	setEducation,
-	setPracticalExperience,
-}) {
+export function CvForm({ onSubmit }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const data = Object.fromEntries(new FormData(e.target));
