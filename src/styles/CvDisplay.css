@@ -1,0 +1,39 @@
+#cv-display {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 100%;
+	& .general-information-display {
+		text-align: center;
+		& > div {
+			display: flex;
+			gap: 5px;
+			justify-content: center;
+		}
+	}
+	& .education-display {
+		& > div {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	& .practical-experience-display {
+		& > .practical-experience-display-main-info {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	& .dates {
+		display: flex;
+		gap: 5px;
+	}
+	& .cv-display-subheading {
+		font-style: italic;
+	}
+	& .cv-display-main-responsibilities {
+		white-space: pre-line;
+	}
+	& hr {
+		margin-bottom: 10px;
+	}
+}

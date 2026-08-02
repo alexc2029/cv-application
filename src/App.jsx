@@ -1,3 +1,4 @@
+import { CvDisplay } from "./components/CvDisplay";
 import { CvForm } from "./components/CvForm";
 import "./styles/App.css";
 import { useState } from "react";
@@ -51,7 +52,15 @@ function App() {
 		<>
 			<main>
 				<h1>CV Application</h1>
-				<CvForm onSubmit={handleFinalSubmit} />
+				{!isFormSubmitted ? (
+					<CvForm onSubmit={handleFinalSubmit} />
+				) : (
+					<CvDisplay
+						generalInformation={generalInformation}
+						education={education}
+						practicalExperience={practicalExperience}
+					/>
+				)}
 				<button
 					type={isFormSubmitted ? "button" : "submit"}
 					form={isFormSubmitted ? "" : "cv-form"}
