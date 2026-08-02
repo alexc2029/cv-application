@@ -17,7 +17,7 @@ export function PracticalExperience({}) {
 					type="text"
 					id="position-title"
 					name="position-title"
-					defaultValue="CEO"
+					defaultValue="Principal Software Engineer"
 				/>
 			</div>
 			<div>
@@ -27,7 +27,9 @@ export function PracticalExperience({}) {
 				<textarea
 					id="main-responsibilities"
 					name="main-responsibilities"
-					defaultValue="Running the company"
+					defaultValue={`- Architected and scaled core distributed systems serving 10M+ users on Azure, maintaining 99.99% availability and cutting latency by 35%.
+					- Led cross-functional teams of 15+ engineers to deliver cloud-native services, setting CI/CD and engineering quality standards.
+					- Driven modern technical strategies across org boundaries, reducing annual infrastructure costs by $450K while mentoring senior talent.`}
 				></textarea>
 			</div>
 			<div>
