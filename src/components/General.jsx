@@ -1,4 +1,4 @@
-export function General({}) {
+export function General({ generalInformation }) {
 	return (
 		<section>
 			<h2>General Information</h2>
@@ -8,7 +8,7 @@ export function General({}) {
 					type="text"
 					id="name"
 					name="name"
-					defaultValue="John Smith"
+					defaultValue={generalInformation.name}
 				/>
 			</div>
 			<div>
@@ -17,7 +17,7 @@ export function General({}) {
 					type="email"
 					id="email"
 					name="email"
-					defaultValue="john.smith@email.com"
+					defaultValue={generalInformation.email}
 				/>
 			</div>
 			<div>
@@ -26,7 +26,7 @@ export function General({}) {
 					type="tel"
 					id="phone-number"
 					name="phone-number"
-					defaultValue="0722222222"
+					defaultValue={generalInformation.phoneNumber}
 				/>
 			</div>
 		</section>

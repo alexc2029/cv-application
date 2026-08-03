@@ -6,20 +6,22 @@ import { useState } from "react";
 function App() {
 	const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 	const [generalInformation, setGeneralInformation] = useState({
-		name: "",
-		email: "",
-		phoneNumber: "",
+		name: "John Smith",
+		email: "john.smith@email.com",
+		phoneNumber: "0722222222",
 	});
 	const [education, setEducation] = useState({
-		schoolName: "",
-		titleOfStudy: "",
+		schoolName: "Massachusetts Institute of Technology",
+		titleOfStudy: "Computer Science",
 		startDate: "",
 		endDate: "",
 	});
 	const [practicalExperience, setPracticalExperience] = useState({
-		companyName: "",
-		positionTitle: "",
-		mainResponsibilities: "",
+		companyName: "Microsoft",
+		positionTitle: "Principal Software Engineer",
+		mainResponsibilities: `- Architected and scaled core distributed systems serving 10M+ users on Azure, maintaining 99.99% availability and cutting latency by 35%.
+		- Led cross-functional teams of 15+ engineers to deliver cloud-native services, setting CI/CD and engineering quality standards.
+		- Driven modern technical strategies across org boundaries, reducing annual infrastructure costs by $450K while mentoring senior talent.`,
 		startDate: "",
 		endDate: "",
 	});
@@ -53,7 +55,12 @@ function App() {
 			<main>
 				<h1>CV Application</h1>
 				{!isFormSubmitted ? (
-					<CvForm onSubmit={handleFinalSubmit} />
+					<CvForm
+						onSubmit={handleFinalSubmit}
+						generalInformation={generalInformation}
+						education={education}
+						practicalExperience={practicalExperience}
+					/>
 				) : (
 					<CvDisplay
 						generalInformation={generalInformation}

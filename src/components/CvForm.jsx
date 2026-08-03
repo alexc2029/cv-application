@@ -2,7 +2,12 @@ import { General } from "./General";
 import { Education } from "./Education";
 import { PracticalExperience } from "./PracticalExperience";
 
-export function CvForm({ onSubmit }) {
+export function CvForm({
+	onSubmit,
+	generalInformation,
+	education,
+	practicalExperience,
+}) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const data = Object.fromEntries(new FormData(e.target));
@@ -10,9 +15,9 @@ export function CvForm({ onSubmit }) {
 	};
 	return (
 		<form id="cv-form" onSubmit={handleSubmit} action="">
-			<General />
-			<Education />
-			<PracticalExperience />
+			<General generalInformation={generalInformation} />
+			<Education education={education} />
+			<PracticalExperience practicalExperience={practicalExperience} />
 		</form>
 	);
 }

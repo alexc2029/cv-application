@@ -1,4 +1,4 @@
-export function Education({}) {
+export function Education({ education }) {
 	return (
 		<section>
 			<h2>Education</h2>
@@ -8,7 +8,7 @@ export function Education({}) {
 					type="text"
 					id="school-name"
 					name="school-name"
-					defaultValue="Massachusetts Institute of Technology"
+					defaultValue={education.schoolName}
 				/>
 			</div>
 			<div>
@@ -17,7 +17,7 @@ export function Education({}) {
 					type="text"
 					id="title-of-study"
 					name="title-of-study"
-					defaultValue="Computer Science"
+					defaultValue={education.titleOfStudy}
 				/>
 			</div>
 			<div>

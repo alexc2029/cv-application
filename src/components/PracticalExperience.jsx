@@ -1,4 +1,4 @@
-export function PracticalExperience({}) {
+export function PracticalExperience({ practicalExperience }) {
 	return (
 		<section>
 			<h2>Practical Experience</h2>
@@ -8,7 +8,7 @@ export function PracticalExperience({}) {
 					type="text"
 					id="company-name"
 					name="company-name"
-					defaultValue="Microsoft"
+					defaultValue={practicalExperience.companyName}
 				/>
 			</div>
 			<div>
@@ -17,7 +17,7 @@ export function PracticalExperience({}) {
 					type="text"
 					id="position-title"
 					name="position-title"
-					defaultValue="Principal Software Engineer"
+					defaultValue={practicalExperience.positionTitle}
 				/>
 			</div>
 			<div>
@@ -27,9 +27,7 @@ export function PracticalExperience({}) {
 				<textarea
 					id="main-responsibilities"
 					name="main-responsibilities"
-					defaultValue={`- Architected and scaled core distributed systems serving 10M+ users on Azure, maintaining 99.99% availability and cutting latency by 35%.
-					- Led cross-functional teams of 15+ engineers to deliver cloud-native services, setting CI/CD and engineering quality standards.
-					- Driven modern technical strategies across org boundaries, reducing annual infrastructure costs by $450K while mentoring senior talent.`}
+					defaultValue={practicalExperience.mainResponsibilities}
 				></textarea>
 			</div>
 			<div>
