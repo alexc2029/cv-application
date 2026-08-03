@@ -1,6 +1,7 @@
 import "../styles/CvDisplay.css";
 
 export function CvDisplay({
+	onButtonClick,
 	generalInformation,
 	education,
 	practicalExperience,
@@ -54,6 +55,9 @@ export function CvDisplay({
 					</div>
 				</div>
 			</div>
+			<button type="button" onClick={onButtonClick}>
+				Edit
+			</button>
 		</div>
 	);
 }

@@ -57,24 +57,19 @@ function App() {
 				{!isFormSubmitted ? (
 					<CvForm
 						onSubmit={handleFinalSubmit}
+						onButtonClick={onButtonClick}
 						generalInformation={generalInformation}
 						education={education}
 						practicalExperience={practicalExperience}
 					/>
 				) : (
 					<CvDisplay
+						onButtonClick={onButtonClick}
 						generalInformation={generalInformation}
 						education={education}
 						practicalExperience={practicalExperience}
 					/>
 				)}
-				<button
-					type={isFormSubmitted ? "button" : "submit"}
-					form={isFormSubmitted ? "" : "cv-form"}
-					onClick={onButtonClick}
-				>
-					{isFormSubmitted ? "Edit" : "Submit"}
-				</button>
 			</main>
 		</>
 	);

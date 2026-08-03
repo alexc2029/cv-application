@@ -4,6 +4,7 @@ import { PracticalExperience } from "./PracticalExperience";
 
 export function CvForm({
 	onSubmit,
+	onButtonClick,
 	generalInformation,
 	education,
 	practicalExperience,
@@ -18,6 +19,9 @@ export function CvForm({
 			<General generalInformation={generalInformation} />
 			<Education education={education} />
 			<PracticalExperience practicalExperience={practicalExperience} />
+			<button type="submit" onClick={onButtonClick}>
+				Submit
+			</button>
 		</form>
 	);
 }
