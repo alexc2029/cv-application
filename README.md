@@ -1,5 +1,7 @@
 # CV Application
 
+[Live demo](https://cv-application29.netlify.app/)
+
 This is my first react project. It is as minimal as possible in aspects such as styling, its purpose being to
 get more comfortable with react state and props. I have also encountered and fixed an interesting bug. My form's onSubmit would not fire when you pressed the "submit" button, but would fire if you pressed it again, in its "edit" state.
 
